@@ -1,0 +1,2849 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Citychampion</title>
+  <head></head>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<style>
+body{
+  overflow-x:hidden; 
+ font-style:italic;
+ display: block
+ font-family: "Times New Roman", Times, serif;
+}
+div{
+  font-family: "Times New Roman", Times, serif;
+}
+table{
+  font-family: "Times New Roman", Times, serif;
+}
+section{
+ font-family: "Times New Roman", Times, serif;
+}
+nav{
+  font-family: "Times New Roman", Times, serif;
+}
+.logo img {
+  top: 0; 
+  width:8.5%;
+  position:fixed; 
+  margin:-0.4% 0% 0% -13%;
+}
+.shadow {
+   -moz-box-shadow:    inset 0 0 10px #000000;
+   -webkit-box-shadow: inset 0 0 10px #000000;
+   box-shadow:         inset 0 0 10px #000000;
+   background-color:white;
+}
+#navlist{
+color:white; 
+}
+#slidpictures{
+  width: 100%;
+  height:100%;
+}
+#home{
+  text-align: center;
+}
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+.text1{
+  color:#f2f2f2;
+  font-size:4vw;
+  font-family: Arial, Helvetica, sans-serif;
+  padding:8px 12px;
+  position:absolute;
+  bottom:65%;
+  width:100%;
+  text-align:center;
+  overflow: hidden; /
+  border-right: .10em solid orange; 
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; 
+  letter-spacing: .13em; 
+  animation: 
+  typing 5.0s steps(30, end),
+   blink-caret .50s step-end infinite;
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+.our-team{
+    text-align: center;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease 0s;
+}
+.our-team .pic{
+     background-image: linear-gradient(45deg, #874da2 0%, #c43a30 100%);
+    transition: all 0.3s ease 0s;
+}
+.our-team:hover .pic{
+    padding: 10px;
+    border-radius: 10px;
+    transform: scale(0.5) translateY(-30%);
+}
+.our-team .pic img{
+    width: 100%;
+    height: auto;
+}
+.our-team .team-content{
+    width: 100%;
+    padding: 7px 15px;
+     background-image: linear-gradient(45deg, #874da2 0%, #c43a30 100%);
+    position: absolute;
+    bottom: -30%;
+    right: 0;
+    opacity: 0;
+    transition: all 0.3s ease 0s;
+}
+.our-team:hover .team-content{
+    opacity: 1;
+    bottom: -10px;
+}
+.our-team .title{
+    font-size: 22px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 5px 0;
+}
+.our-team .title2{
+    font-size:14px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 5px 0;
+}
+.our-team .post{
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    font-style: italic;
+    text-transform: capitalize;
+    margin: 0 0 5px 0;
+}
+.our-team .social{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    transition: all 0.35s ease 0s;
+}
+.our-team .social li{
+    display: inline-block;
+    margin: 0 5px 0 0;
+}
+.our-team .social li a{
+    display: block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 15px 0 15px 0;
+    font-size: 20px;
+    color: #fff;
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+    transition: all 0.35s ease 0s;
+}
+.our-team .social li a:before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #e06f06;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    z-index: -1;
+    transition: all 0.3s ease-in-out 0s;
+}
+.our-team .social li a:hover:before{ left: 0; }
+@media only screen and (max-width: 990px){
+    .our-team{ margin-bottom: 30px; }
+}
+</style> 
+<body>
+<div> 
+      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top"id="mainNav"style="font-family: Arial, Helvetica, sans-serif;width:100%; background-image: linear-gradient(45deg, #874da2 0%, #c43a30 100%);">
+    <div class="container"style="margin: 0% -10% 0% 15%;">
+      <img style="border-radius:5px; height: 5%;width: 5%;" class="shadow" src="images/aitamlogo.jpg"></a>
+      <a class="navbar-brand js-scroll-trigger logo" href="home.html"><img style="border-radius: 5px;" src="images/citychampionlogo.png"></a>
+      <button style="margin: 0% 0% 0% 25%;" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive" >
+        <ul class="navbar-nav ml-auto" >
+                  <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" id="navlist" href="#home">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger"id="navlist" href="#about">About Us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger"id="navlist" href="#scholls_list">Schools</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger"id="navlist" href="#pictures">Gallery</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger"id="navlist" href="#summer_program"> Summer Program </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger"id="navlist" href="#Press">Press</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger"id="navlist" href="#team">Our Team</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger"id="navlist" href="#Contact">Contact</a>
+                  </li>
+                </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+<br>
+<!------------------------   ----------------------------->
+
+<!------------------------   ----------------------------->
+<div id="home">
+
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+              </ol>
+              <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="images/13-11-19 fb.jpg" id="slidpictures">
+                        <h5 class="text1"> Summer Camp is Coming Soon..</h5>
+                        <!-- <div class="carousel-caption d-none d-md-block" style="background : rgba(0, 0 , 0 , 0.6);">
+                                    <h5 style="color:orangered;"> --</h5>
+                                    <p style="text-align: center">--------</p>
+                                </div>-->
+                      </div>
+                      
+                      <div class="carousel-item">
+                        <img src="images/schoolspic (6).jpg" id="slidpictures">
+                        <h5 class="text1"> Summer Camp is Coming Soon..</h5>
+                        <!--<div class="carousel-caption d-none d-md-block" style="background : rgba(0, 0 , 0 , 0.6);">
+                                    <h5 style="color:orangered;"> --</h5>
+                                    <p style="text-align: center">--------</p>
+                                </div>-->
+                      </div>
+                       <div class="carousel-item">
+                        <img src="images/_DSC9156.JPG" id="slidpictures">
+                        <h5 class="text1"> Summer Camp is Coming Soon..</h5>
+                        <!--<div class="carousel-caption d-none d-md-block" style="background : rgba(0, 0 , 0 , 0.6);">
+                                    <h5 style="color:orangered;"> --</h5>
+                                    <p style="text-align: center">--------</p>
+                                </div>-->
+                      </div>
+                       <div class="carousel-item">
+                        <img src="images/_DSC8885.JPG" id="slidpictures">
+                        <h5 class="text1"> Summer Camp is Coming Soon..</h5>
+                        <!--<div class="carousel-caption d-none d-md-block" style="background : rgba(0, 0 , 0 , 0.6);">
+                                    <h5 style="color:orangered;"> --</h5>
+                                    <p style="text-align: center">--------</p>
+                                </div>-->
+                      </div>
+                      <div class="carousel-item">
+                        <img src="images/_DSC9204.png" id="slidpictures">
+                        <h5 class="text1"> Summer Camp is Coming Soon..</h5>
+                        <!--<div class="carousel-caption d-none d-md-block" style="background : rgba(0, 0 , 0 , 0.6);">
+                                    <h5 style="color:orangered;"> --</h5>
+                                    <p style="text-align: center">--------</p>
+                                </div>-->
+                      </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+    </div>
+</div>
+<!------------------------   ----------------------------->
+   <div class="container" id="about">
+    <br><Br><Br>
+    <h1 class="text-center text-danger">ABOUT US</h1>
+    <p class="lead" style="text-align:justify;"> <strong> City champion </strong>is an initiative for enhancement of student skill set from very root levels .This is a contest which is organized by student community of<b>Aditya Institute of Technology and Management</b> , Tekkali. The strategy of iniating this contest is to declare one school as city champion among many schools around the city of Srikakulam on the basis of student performance in all the aspects of competition organized by the AITAM. This contest focuses on selecting of effective and interested students from different schools to make them learn the advanced technology at very basic stages in the forms of <b> Summer Carnivals</b>  at the workspace of Aditya Institute of Technology and Management. This contest will make students to know the current technologies and the advancements in Technology which are going to enhance future of our society. Students who are going to build this nation need to be very much advanced in all the aspects so that they can learn the technology in schooling to develop products beneficial for their school in an innovative and creative way.  </p>   
+ 
+      </div>
+    </div>
+  </div>
+</div>
+<!------------------------   ----------------------------->
+
+<!------------------------   -----------------------------> 
+<section id="scholls_list" style="width:85%;margin: 0% 0% 0% 8%;">
+  <br><Br>
+  <br>
+  <h1 class="text-center text-danger">PARTICIPATED SCHOOLS</h1>
+  <div class="table-responsive">
+            <table class="table table-bordered">
+              <thead class="bg-danger" style="color:white;">
+                <tr>
+                    <th scope="col">S No.</th>
+                    <th scope="col">Name of the school</th>
+                     <th scope="col">Qualified Students</th>
+                     <th scope="col">Participated Students</th>
+                    <th scope="col">Location</th>
+                    
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>GMR Seetha Mahalakhmi DAV Public School</td>
+                 
+                  <td style="">
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn bg-danger  text-white" data-toggle="modal" data-target="#model1">View</button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="model1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                              <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Qualified Students</h5>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
+                                  </div>
+                                  <div class="modal-body">
+                                          <table class="table table-bordered">
+                                                 <tbody><tr>
+                                                   <th>S No.</th>
+                                                   <th>Student Name</th>
+                                                   <th>Class</th>
+                                                 </tr>
+                                                 
+                                                 <tr>
+                                                   <td>1</td>
+                                                   <td>K.Mohith</td>
+                                                   <td>8th</td>
+                                                 </tr>
+                                                 <tr>
+                                                   <td>2</td>
+                                                   <td>CH.Girija Lahari</td>
+                                                   <td>8th</td>
+                                                 </tr>
+                                                 <tr>
+                                                   <td>3</td>
+                                                   <td>G.Haritha</td>
+                                                   <td>8th</td>
+                                                 </tr>
+                                                 <tr>
+                                                   <td>4</td>
+                                                   <td>P.Bhargav Manikanta</td>
+                                                   <td>6th</td>
+                                                 </tr><tr>
+                                                   <td>5</td>
+                                                   <td>K.Gowtham Kumar</td>
+                                                   <td>6th</td>
+                                                 </tr>
+                                                 <tr>
+                                                   <td>6</td>
+                                                   <td>V.Jayachand</td>
+                                                   <td>6th</td>
+                                                 </tr>
+                                                  <tr>
+                                                   <td>7</td>
+                                                   <td>S.Pranay Harshith</td>
+                                                   <td>7th</td>
+                                                 </tr><tr>
+                                                   <td>8</td>
+                                                   <td>Y.V.D Sai Sowmya</td>
+                                                   <td>7th</td>
+                                                 </tr>
+                                                 <tr>
+                                                   <td>9</td>
+                                                   <td>G.Badhrinath</td>
+                                                   <td>7th</td>
+                                                 </tr>
+                                                 <tr>
+                                                   <td>10</td>
+                                                   <td>K.Sindhu</td>
+                                                   <td>9th</td>
+                                                 </tr><tr>
+                                                   <td>11</td>
+                                                   <td>S.Parimala</td>
+                                                   <td>9th</td>
+                                                 </tr>
+                                                 <tr>
+                                                   <td>12</td>
+                                                   <td>Y.Ruthika Priyadarshini</td>
+                                                   <td>9th</td>
+                                                 </tr>
+                                                 <tr>
+                                                   <td>13</td>
+                                                   <td>Y.Goutham</td>
+                                                   <td>9th</td>
+                                                 </tr>
+                                                 <tr>
+                                                   <td>14</td>
+                                                   <td>G.Sai Vaishnavi</td>
+                                                   <td>8th</td>
+                                                 </tr>
+                                                 <tr>
+                                                   <td>15</td>
+                                                   <td>K.Satya Sree</td>
+                                                   <td>7th</td>
+                                                 </tr>
+
+                                              </tbody>
+                                       </table>
+                                      </div>
+                                                <div class="modal-footer">
+                                                  <button type="button" class="btn btn-secondary text-white" data-dismiss="modal">Close</button>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>         
+                  </td>
+                   <td>195</td>
+                  <td>Palakonda</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>TSR English Medium School </td>
+                  
+                  <td>
+                    <!-- Button trigger modal -->
+                <button type="button" data-target="#model2"   class="btn bg-danger text-white" data-toggle="modal" >View</button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="model2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Qualified Students</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                           
+                                       <table class="table">
+                                    <tbody><tr>
+                                         <th>S No.</th>
+                                         <th>Student Name</th>
+                                         <th>Class</th>
+                                       </tr>
+                                       <tr>
+                                         <td>1</td>
+                                         <td>G.Mahasree</td>
+                                         <td>9th</td>
+                                       </tr>
+                                       <tr>
+                                         <td>2</td>
+                                         <td>G.Jhansi</td>
+                                         <td>9th</td>
+                                       </tr>
+                                       <tr>
+                                         <td>3</td>
+                                         <td>S.Jagadeesh</td>
+                                         <td>8th</td>
+                                       </tr>
+                                       <tr>
+                                         <td>4</td>
+                                         <td>D.Charan Deep</td>
+                                         <td>8th</td>
+                                       </tr>
+                                       <tr>
+                                         <td>5</td>
+                                         <td>S.Pradhasaradhi</td>
+                                         <td>7th</td>
+                                       </tr>
+                                       <tr>
+                                         <td>6</td>
+                                         <td>M.Gowtham</td>
+                                         <td>7th</td>
+                                       </tr>
+                                       <tr>
+                                         <td>7</td>
+                                         <td></td>
+                                         <td>6th</td>
+                                       </tr><tr>
+                                         <td>8</td>
+                                         <td></td>
+                                         <td>6th</td>
+                                       </tr>
+                                     </tbody></table>     
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary " data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                    
+                  </td>
+                  <td>49 </td>
+                  <td>Amadalavalasa</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Municipal High school </td>
+                  
+                  <td>
+                      <!-- Button trigger modal -->
+                <button type="button" data-target="#model3"   class="btn bg-danger text-white" data-toggle="modal" >View</button>
+
+            <!-- Modal -->
+                  <div class="modal fade" id="model3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLongTitle">Qualified Students</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                            <table class="table">
+                                       <tbody><tr>
+                                         <th>S No.</th>
+                                         <th>Student Name</th>
+                                         <th data-lable="class">Class</th>
+                                       </tr>
+                                       <tr>
+                                         <td>1</td>
+                                         <td>K.Jyothsna</td>
+                                         <td>9th</td>
+                                       </tr>
+                                       <tr>
+                                         <td>2</td>
+                                         <td>V.Bharath Kumar</td>
+                                         <td>9th</td>
+                                       </tr>
+                                       <tr>
+                                         <td>3</td>
+                                         <td>G.Mahesh</td>
+                                         <td>8th</td>
+                                       </tr>
+                                       <tr>
+                                         <td>4</td>
+                                         <td>A.Surya</td>
+                                         <td>8th</td>
+                                       </tr>
+                                       <tr>
+                                         <td>5</td>
+                                         <td>B.Mahesndra </td>
+                                         <td>7th</td>
+                                       </tr>
+                                       <tr>
+                                         <td>6</td>
+                                         <td>D.Gowthami</td>
+                                         <td>7th</td>
+                                       </tr>
+                                       <tr>
+                                         <td>7</td>
+                                         <td>K.Jnaneswara Rao</td>
+                                         <td>6th</td>
+                                       </tr>
+                                       <tr>
+                                         <td>8</td>
+                                         <td>S.Vyvidhyu</td>
+                                         <td>6th</td>
+                                       </tr>
+                                       <tr>
+                                         <td>9</td>
+                                         <td>P.Rakesh</td>
+                                         <td>7th</td>
+                                       </tr>
+                                       <tr>
+                                         <td>10</td>
+                                         <td>G.Hemant Kumar</td>
+                                         <td>7th</td>
+                                       </tr>
+                                     </tbody></table>
+                          </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondar text-white" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                    
+                  </td>
+                  <td>223 </td>
+                  <td> Laxminagar,Amadalavalasa</td>
+                </tr>
+                <tr>
+                  <th scope="row">4</th>
+                  <td>Bhavitha High school</td>
+                  
+                  <td>
+                    <!-- Button trigger modal -->
+                  <button type="button" data-target="#model4"   class="btn bg-danger text-white" data-toggle="modal" >View</button>
+                  <!-- Modal -->
+                  <div class="modal fade" id="model4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLongTitle">Qualified Students</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                                       <table class="table">
+                                       <tbody><tr>
+                                         <th>S No.</th>
+                                         <th>Student Name</th>
+                                         <th>Class</th>
+                                       </tr>
+                                       <tr>
+                                         <td>1.</td>
+                                         <td>Tammana Chandini</td>
+                                         <td>9th</td>
+                                       </tr>
+                                       <tr>
+                                         <td>2.</td>
+                                         <td>Birlangi Chandini</td>
+                                         <td>9th</td>
+                                       </tr>
+                                       <tr>
+                                         <td>3.</td>
+                                         <td>Kinthali Meghana</td>
+                                         <td>8th</td>
+                                       </tr>
+                                       <tr>
+                                         <td>4.</td>
+                                         <td>V.Kuladeep</td>
+                                         <td>8th</td>
+                                       </tr>
+                                       <tr>
+                                         <td>5.</td>
+                                         <td>B.Surya Geetika</td>
+                                         <td>7th</td>
+                                       </tr>
+                                       <tr>
+                                         <td>6.</td>
+                                         <td>M.Laxmi Rajala</td>
+                                         <td>7th</td>
+                                       </tr>
+                                       <tr>
+                                         <td>7.</td>
+                                         <td>Ch.Sarvan</td>
+                                         <td>6th</td>
+                                       </tr><tr>
+                                         <td>8.</td>
+                                         <td>Ch.Ajay Kumar</td>
+                                         <td>6th</td>
+                                       </tr>
+                                     </tbody></table>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-seconda " data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                    
+                  </td>
+                  <td>49</td>
+                  <td>Amadalavalasa</td>
+                </tr>
+                <tr>
+                  <th scope="row">5</th>
+                  <td>S.V.S English Medium School</td>
+                  
+                  <td>
+                          <!-- Button trigger modal -->
+                    <button type="button" data-target="#model5"   class="btn bg-danger text-white" data-toggle="modal" >View</button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="model5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Qualified Students</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                                         <table class="table">
+                                         <tbody><tr>
+                                           <th>S No.</th>
+                                           <th>Student Name</th>
+                                           <th>Class</th>
+                                         </tr>
+                                         <tr>
+                                           <td>1</td>
+                                           <td>D.Sai Sarath</td>
+                                           <td>9th</td>
+                                         </tr>
+                                         <tr>
+                                           <td>2</td>
+                                           <td>P.Avinash</td>
+                                           <td>9th</td>
+                                         </tr>
+                                         <tr>
+                                           <td>3</td>
+                                           <td>P.Navya Sri</td>
+                                           <td>8th</td>
+                                         </tr>
+                                         <tr>
+                                           <td>4</td>
+                                           <td>CH.Harshini</td>
+                                           <td>8th</td>
+                                         </tr>
+                                         <tr>
+                                           <td>5</td>
+                                           <td>V.Rajashekar</td>
+                                           <td>7th</td>
+                                         </tr>
+                                         <tr>
+                                           <td>6</td>
+                                           <td>T.Dinesh Kumar</td>
+                                           <td>7th</td>
+                                         </tr>
+                                         <tr>
+                                           <td>7</td>
+                                           <td>N.Ram Charan</td>
+                                           <td>6th</td>
+                                         </tr><tr>
+                                           <td>8</td>
+                                           <td>B.Tejeswara Rao</td>
+                                           <td>6th</td>
+                                         </tr>
+                                         <tr>
+                                           <td>9</td>
+                                           <td>P.Harshitha</td>
+                                           <td>7th</td>
+                                         </tr><tr>
+                                           <td>10</td>
+                                           <td>J.Vinay Kumar</td>
+                                           <td>7th</td>
+                                         </tr>
+                                       </tbody></table>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-second" data-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </td>
+                  <td>54</td>
+                  <td>Amadalavalasa</td>
+                </tr>
+                <tr>
+                  <th scope="row">6</th>
+                  <td>Infant Jesus English Medium School  </td>
+                  
+                  <td>
+                    <!-- Button trigger modal -->
+                    <button type="button" data-target="#model6"   class="btn bg-danger text-white" data-toggle="modal" >View</button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="model6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Qualified Students</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                                         <table class="table">
+                                         <tbody><tr>
+                                           <th>S No.</th>
+                                           <th>Student Name</th>
+                                           <th>Class</th>
+                                         </tr>
+                                         <tr>
+                                           <td>1</td>
+                                           <td>B.Vijaya Laxmi</td>
+                                           <td>9th</td>
+                                         </tr>
+                                         <tr>
+                                           <td>2</td>
+                                           <td>G.Pranathi</td>
+                                           <td>9th</td>
+                                         </tr>
+                                         <tr>
+                                           <td>3</td>
+                                           <td>K.Venkata Karthik</td>
+                                           <td>9th</td>
+                                         </tr>
+                                         <tr>
+                                           <td>4</td>
+                                           <td>K.Chiranjeevi</td>
+                                           <td>9th</td>
+                                         </tr>
+                                         <tr>
+                                           <td>5</td>
+                                           <td> T.Srinivas Reddy</td>
+                                           <td>8th</td>
+                                         </tr>
+                                         <tr>
+                                           <td>6</td>
+                                           <td>B.Naga Navadeep</td>
+                                           <td>8th</td>
+                                         </tr>
+                                         <tr>
+                                           <td>7</td>
+                                           <td>R.Akanksha</td>
+                                           <td>8th</td>
+                                         </tr>
+                                         <tr>
+                                           <td>8</td>
+                                           <td>T.Yoshitha Sai</td>
+                                           <td>7th</td>
+                                         </tr>
+                                         <tr>
+                                           <td>9</td>
+                                           <td>S.Suraj</td>
+                                           <td>7th</td>
+                                         </tr>
+                                         <tr>
+                                           <td>10</td>
+                                           <td>J.Yojitha</td>
+                                           <td>7th</td>
+                                         </tr>
+                                         <tr>
+                                           <td>11</td>
+                                           <td>G. Manoj Kumar Reddy</td>
+                                           <td>7th</td>
+                                         </tr><tr>
+                                           <td>12</td>
+                                           <td>K.Manikanta</td>
+                                           <td>6th</td>
+                                         </tr><tr>
+                                           <td>13</td>
+                                           <td>Y.Girish Reddy </td>
+                                           <td>6th</td>
+                                         </tr>
+                                         <tr>
+                                           <td>14</td>
+                                           <td>L.Harsha </td>
+                                           <td>6th</td>
+                                         </tr>
+                                         <tr>
+                                           <td>15</td>
+                                           <td>S.Vishal </td>
+                                           <td>6th</td>
+                                         </tr>
+                                       </tbody></table>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </td>
+                  <td>168   </td>
+                  <td>Tekkali</td>
+                </tr>
+                <tr>
+                  <th scope="row">7</th>
+                  <td>ZP High school  </td>
+                  
+                  <td>
+                    <!-- Button trigger modal -->
+                  <button type="button" data-target="#model7"   class="btn bg-danger text-white" data-toggle="modal" >View</button>
+
+
+                  <!-- Modal -->
+                  <div class="modal fade" id="model7" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLongTitle">Qualified Students</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                                       <table class="table">
+                                     <<tbody><tr>
+                                         <th>S No.</th>
+                                         <th>Student Name</th>
+                                         <th>Class</th>
+                                       </tr>
+                                       <tr>
+                                         <td>1</td>
+                                         <td>D Yamini</td>
+                                         <td>9th</td>
+                                       </tr>
+                                       <tr>
+                                         <td>2</td>
+                                         <td>M. Tanuja</td>
+                                         <td>9th</td>
+                                       </tr>
+                                       <tr>
+                                         <td>3</td>
+                                         <td>A.Varshini</td>
+                                         <td>8th</td>
+                                       </tr>
+                                       <tr>
+                                         <td>4</td>
+                                         <td>M.Revathi</td>
+                                         <td>8th</td>
+                                       </tr>
+                                       <tr>
+                                         <td>5</td>
+                                         <td>B.Pavan Kumar</td>
+                                         <td>7th</td>
+                                       </tr>
+                                       <tr>
+                                         <td>6</td>
+                                         <td>A.Sevendra Kumar</td>
+                                         <td>7th</td>
+                                       </tr>
+                                       <tr>
+                                         <td>7</td>
+                                         <td>B.Suresh</td>
+                                         <td>6th</td>
+                                       </tr><tr>
+                                         <td>8</td>
+                                         <td>M.yashaswini</td>
+                                         <td>6th</td>
+                                       </tr>
+
+                                     </tbody></table>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+          </td>
+                    
+                  </td>
+                  <td>49</td>
+                  <td>Voppangi</td>
+                </tr>
+                <tr>
+                  <th scope="row">8</th>
+                  <td>Government School </td>
+                 
+                  <td>
+                     <!-- Button trigger modal -->
+                  <button type="button" data-target="#model8"   class="btn bg-danger text-white" data-toggle="modal" >View</button>
+
+                  <!-- Modal -->
+                  <div class="modal fade" id="model8" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLongTitle">Qualified Students</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                              
+                                      <table class="table">
+                                    <tbody><tr>
+                                         <th>S No.</th>
+                                         <th>Student Name</th>
+                                         <th>Class</th>
+                                       </tr>
+                                       <tr>
+                                         <td>1</td>
+                                         <td>V.Vijaya Lakshmi</td>
+                                         <td>9th</td>
+                                       </tr>
+                                       <tr>
+                                         <td>2</td>
+                                         <td>B.Venkatesh</td>
+                                         <td>9th</td>
+                                       </tr>
+                                       <tr>
+                                         <td>3</td>
+                                         <td>P.Jaewanth Kumar</td>
+                                         <td>9th</td>
+                                       </tr>
+                                       <tr>
+                                         <td>4</td>
+                                         <td>K.Raju</td>
+                                         <td>8th</td>
+                                       </tr>
+                                       <tr>
+                                         <td>5</td>
+                                         <td>P.Vandana</td>
+                                         <td>8th</td>
+                                       </tr>
+                                       <tr>
+                                         <td>6</td>
+                                         <td>P.Arun Kumar</td>
+                                         <td>8th</td>
+                                       </tr>
+                                       <tr>
+                                         <td>7</td>
+                                         <td>K.Vasudev</td>
+                                         <td>7th</td>
+                                       </tr>
+                                       <tr>
+                                         <td>8</td>
+                                         <td>K.Balu</td>
+                                         <td>7th</td>
+                                       </tr>
+                                       <tr>
+                                         <td>9</td>
+                                         <td> S.Devi</td>
+                                         <td>6th</td>
+                                       </tr><tr>
+                                         <td>10</td>
+                                         <td>S.Manasa</td>
+                                         <td>6th</td>
+                                       </tr>
+                                     </tbody></table>
+                                
+                             
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                    
+                  </td>
+                   <td>135</td>
+                  <td>Santhabommali</td>
+                </tr>
+                <tr>
+                  <th scope="row">9</th>
+                  <td>Government High school  </td>
+                  
+                  <td>
+                    <!-- Button trigger modal -->
+                  <button type="button" data-target="#model9"   class="btn bg-danger text-white" data-toggle="modal" >View</button>
+
+                  <!-- Modal -->
+                  <div class="modal fade" id="model9" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLongTitle">Qualified Students</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                                       <table class="table">
+                                    <tbody><tr>
+                                         <th>S No.</th>
+                                         <th>Student Name</th>
+                                         <th>Class</th>
+                                       </tr>
+                                       <tr>
+                                         <td>1</td>
+                                         <td>S.Vamsi</td>
+                                         <td>9th</td>
+                                       </tr>
+                                       <tr>
+                                         <td>2</td>
+                                         <td>N.Jaya Sindhu</td>
+                                         <td>9th</td>
+                                       </tr>
+                                       <tr>
+                                         <td>3</td>
+                                         <td>M.Kalyani</td>
+                                         <td>9th</td>
+                                       </tr>
+                                       <tr>
+                                         <td>4</td>
+                                         <td>K.Charan Kumar</td>
+                                         <td>8th</td>
+                                       </tr>
+                                       <tr>
+                                         <td>5</td>
+                                         <td>K.Pravallika</td>
+                                         <td>8th</td>
+                                       </tr>
+                                       <tr>
+                                         <td>6</td>
+                                         <td>M.Sravani</td>
+                                         <td>7th</td>
+                                       </tr>
+                                       <tr>
+                                         <td>7</td>
+                                         <td>T.Bhanu Prasad</td>
+                                         <td>7th</td>
+                                       </tr><tr>
+                                         <td>8</td>
+                                         <td>P.DineshRao</td>
+                                         <td>7th</td>
+                                       </tr>
+                                       <tr>
+                                         <td>9</td>
+                                         <td>B.Chandini</td>
+                                         <td>6th</td>
+                                       </tr><tr>
+                                         <td>10</td>
+                                         <td>V.Khageswari</td>
+                                         <td>6th</td>
+                                       </tr>
+                                     </tbody></table>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                    
+                  </td>
+                  <td>50 </td>
+                  <td>Narsingapalli</td>
+                </tr>
+                <tr>
+                  <th scope="row">10</th>
+                  <td>M.P.U.P School  </td>
+                  
+                  <td>
+                    <!-- Button trigger modal -->
+                  <button type="button" data-target="#model10"   class="btn bg-danger text-white" data-toggle="modal" >View</button>
+
+                  <!-- Modal -->
+                  <div class="modal fade" id="model10" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLongTitle">Qualified Students</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                                       <table class="table">
+                                     <tbody><tr>
+                                         <th>S No.</th>
+                                         <th>Student Name</th>
+                                         <th>Class</th>
+                                       </tr>
+                                       <tr>
+                                         <td>1</td>
+                                         <td>V.Madhuri</td>
+                                         <td>8th</td>
+                                       </tr>
+                                       <tr>
+                                         <td>2</td>
+                                         <td>R.Mounika</td>
+                                         <td>7th</td>
+                                       </tr>
+                                       <tr>
+                                         <td>3</td>
+                                         <td>K.Renuka</td>
+                                         <td>6th</td>
+                                       </tr>
+                                       
+                                     </tbody>
+
+                                   </table>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                    
+                  </td>
+                  <td>20  </td>
+                  <td> Dunga  Rana,Jalumuru</td>
+                </tr>
+                <tr>
+                  <th scope="row">11</th>
+                  <td>Z.P.High School </td>
+                  
+                  <td>
+                     <!-- Button trigger modal -->
+                  <button type="button" data-target="#model11"   class="btn bg-danger text-white" data-toggle="modal" >View</button>
+
+                  <!-- Modal -->
+                  <div class="modal fade" id="model11" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLongTitle">Qualified Students</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                                  <table class="table">
+                                           <tbody><tr>
+                                             <th>S No.</th>
+                                             <th>Student Name</th>
+                                             <th>Class</th>
+                                           </tr>
+                                           <tr>
+                                             <td>1</td>
+                                             <td>K.Prasanth</td>
+                                             <td>9th</td>
+                                           </tr>
+                                           <tr>
+                                             <td>2</td>
+                                             <td>K.Vardhan</td>
+                                             <td>8th</td>
+                                           </tr>
+                                           <tr>
+                                             <td>3</td>
+                                             <td>V.Srujana</td>
+                                             <td>6th</td>
+                                           </tr>
+                                           
+                                         </tbody></table>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                    
+                  </td>
+                  <td>14</td>
+                  <td>Dunga  Redagudem, Jalumuru</td>
+                </tr>
+                <tr>
+                  <th scope="row">12</th>
+                  <td>Z.P.High School </td>
+                  
+                  <td>
+                    <!-- Button trigger modal -->
+                  <button type="button" data-target="#model12"   class="btn bg-danger text-white" data-toggle="modal" >View</button>
+
+                  <!-- Modal -->
+                  <div class="modal fade" id="model12" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLongTitle">Qualified Students</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                                       <table class="table">
+                                     <tbody><tr>
+                                         <th>S No.</th>
+                                         <th>Student Name</th>
+                                         <th>Class</th>
+                                       </tr>
+                                       <tr>
+                                         <td>1</td>
+                                         <td>CH.Yogiswari</td>
+                                         <td>9th</td>
+                                       </tr>
+                                       <tr>
+                                         <td>2</td>
+                                         <td>P.Sirisha</td>
+                                         <td>9th</td>
+                                       </tr>
+                                       <tr>
+                                         <td>3</td>
+                                         <td>A.Pravallika</td>
+                                         <td>8th</td>
+                                       </tr>
+                                       <tr>
+                                         <td>4</td>
+                                         <td>P.Jyosthna</td>
+                                         <td>8th</td>
+                                       </tr>
+                                       <tr>
+                                         <td>5</td>
+                                         <td>N.Devika</td>
+                                         <td>7th</td>
+                                       </tr>
+                                       <tr>
+                                         <td>6</td>
+                                         <td>R.Manoj</td>
+                                         <td>7th</td>
+                                       </tr>
+                                       <tr>
+                                         <td>7</td>
+                                         <td>K.Maneesha</td>
+                                         <td>7th</td>
+                                       </tr><tr>
+                                         <td>8</td>
+                                         <td>L.Dayakar</td>
+                                         <td>6th</td>
+                                       </tr><tr>
+                                         <td>9</td>
+                                         <td>L.Anil kumar</td>
+                                         <td>6th</td>
+                                       </tr><tr>
+                                         <td>10</td>
+                                         <td>T.Manikanta</td>
+                                         <td>6th</td>
+                                       </tr>
+                                     </tbody></table>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                    
+                  </td>
+                  <td>40 </td>
+                  <td>Ravivalasa</td>
+                </tr>
+                <tr>
+                  <th scope="row">13</th>
+                  <<td>Vikas Talent High School </td>
+                 
+                  <td>
+                                       <!-- Button trigger modal -->
+                          <button type="button" class="btn bg-danger text-white" data-toggle="modal" data-target="#model13">View</button>
+
+                          <!-- Modal -->
+                          <div class="modal fade" id="model13" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalLongTitle">Qualified Students</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                     <table class="table">
+                                               <tbody><tr>
+                                                 <th>S No.</th>
+                                                 <th>Student Name</th>
+                                                 <th>Class</th>
+                                               </tr>
+                                               <tr>
+                                                 <td>1</td>
+                                                 <td>T.Rajyalashmi</td>
+                                                 <td>9th</td>
+                                               </tr>
+                                               <tr>
+                                                 <td>2</td>
+                                                 <td>M.Sai Vyshnavi</td>
+                                                 <td>9th</td>
+                                               </tr>
+                                               <tr>
+                                                 <td>3</td>
+                                                 <td>V.Durgacharan</td>
+                                                 <td>8th</td>
+                                               </tr>
+                                               <tr>
+                                                 <td>4</td>
+                                                 <td>R.Thanusha</td>
+                                                 <td>8th</td>
+                                               </tr>
+                                               <tr>
+                                                 <td>5</td>
+                                                 <td>V.Abhinayasri</td>
+                                                 <td>7th</td>
+                                               </tr>
+                                               <tr>
+                                                 <td>6</td>
+                                                 <td>B.Jyothi Bhaskar</td>
+                                                 <td>7th</td>
+                                               </tr>
+                                               <tr>
+                                                 <td>8</td>
+                                                 <td>K.Rushil 
+                                                 kumar</td>
+                                                 <td>7th</td>
+                                               </tr><tr>
+                                                 <td>9</td>
+                                                 <td>P.Likhitha</td>
+                                                 <td>7th</td>
+                                               </tr>
+                                               <tr>
+                                                 <td>10</td>
+                                                 <td>S.Kavya</td>
+                                                 <td>6th</td>
+                                               </tr><tr>
+                                                 <td>12</td>
+                                                 <td>E.Mahitha</td>
+                                                 <td>6th</td>
+                                               </tr>
+                                               <tr>
+                                                 <td>13</td>
+                                                 <td>M.Kruthika</td>
+                                                 <td>6th</td>
+                                               </tr>
+                                             </tbody></table>
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    
+                  </td>
+                   <td>110  </td>
+                  <td> Srikakulam</td>
+                </tr>
+                <tr>
+                  <th scope="row">14</th>
+                  <td>RavindraBharathi </td>
+                  
+                  <td><!-- Button trigger modal -->
+                      <button type="button" data-target="#model14"   class="btn bg-danger text-white" data-toggle="modal" >View</button>
+
+                      <!-- Modal -->
+                      <div class="modal fade" id="model14" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLongTitle">Qualified Students</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                                        <table class="table">
+                                           <tbody><tr>
+                                             <th>S No.</th>
+                                             <th>Student Name</th>
+                                             <th>Class</th>
+                                           </tr>
+                                           <tr>
+                                             <td>1</td>
+                                             <td>S.Vasudha</td>
+                                             <td>9th</td>
+                                           </tr><tr>
+                                             <td>2</td>
+                                             <td>P.Charn</td>
+                                             <td>9th</td>
+                                           </tr>
+                                           <tr>
+                                             <td>3</td>
+                                             <td>R.Balu</td>
+                                             <td>9th</td>
+                                           </tr>
+
+                                           <tr>
+                                             <td>4</td>
+                                             <td>Y.Pujitha</td>
+                                             <td>8th</td>
+                                           </tr>
+                                           <tr>
+                                             <td>5</td>
+                                             <td>A.Chakradhar</td>
+                                             <td>8th</td>
+                                           </tr>
+                                           <tr>
+                                             <td>6</td>
+                                             <td>B.Likitha</td>
+                                             <td>7th</td>
+                                           </tr><tr>
+                                             <td>7</td>
+                                             <td>A.Charan</td>
+                                             <td>7th</td>
+                                           </tr>
+                                           <tr>
+                                             <td>8</td>
+                                             <td>B.Venkatamani</td>
+                                             <td>7th</td>
+                                           </tr>
+                                           <tr>
+                                             <td>9</td>
+                                             <td>B.Lalasa</td>
+                                             <td>6th</td>
+                                           </tr>
+                                           <tr>
+                                             <td>10</td>
+                                             <td>A.Joshan</td>
+                                             <td>6th</td>
+                                           </tr>
+                                           <tr>
+                                             <td>11</td>
+                                             <td>V.Ganesh Kumar</td>
+                                             <td>6th</td>
+                                           </tr>
+                                           <tr>
+                                                                                       
+                                         </tbody></table>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    
+                  </td>
+                  <td>122</td>
+                  <td>Patapattanam</td>
+                </tr>
+                <tr>
+                  <th scope="row">15</th>
+                  <td>Sarvani Vidyalaya</td>
+                  
+                  <td>
+                    <!-- Button trigger modal -->
+                  <button type="button" data-target="#model15"   class="btn bg-danger text-white" data-toggle="modal" >View</button>
+
+                  <!-- Modal -->
+                  <div class="modal fade" id="model15" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLongTitle">Qualified Students</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                                       <table class="table">
+                                     <tbody><tr>
+                                         <th>S No.</th>
+                                         <th>Student Name</th>
+                                         <th>Class</th>
+                                       </tr>
+                                       <tr>
+                                         <td>1</td>
+                                         <td>G.Pallavi Jyothi</td>
+                                         <td>9th</td>
+                                       </tr>
+                                       <tr>
+                                         <td>2</td>
+                                         <td>B.S.L.V.V . Prasad</td>
+                                         <td>9th</td>
+                                       </tr>
+                                       <tr>
+                                         <td>3</td>
+                                         <td>V.V.S>Rajesh</td>
+                                         <td>8th</td>
+                                       </tr>
+                                       <tr>
+                                         <td>4</td>
+                                         <td>K.Tanish</td>
+                                         <td>8th</td>
+                                       </tr>
+                                       <tr>
+                                         <td>5</td>
+                                         <td>P.Jeevan Vishal</td>
+                                         <td>7th</td>
+                                       </tr>
+                                       <tr>
+                                         <td>6</td>
+                                         <td>K.Sai Vishesh Pranav</td>
+                                         <td>7th</td>
+                                       </tr>
+                                       <tr>
+                                         <td>7</td>
+                                         <td>P.Sameera</td>
+                                         <td>7th</td>
+                                       </tr>
+                                       <tr>
+                                         <td>8</td>
+                                         <td>A.SatyaKailash Kumar</td>
+                                         <td>6th</td>
+                                       </tr><tr>
+                                         <td>9</td>
+                                         <td>B.Ramcharan</td>
+                                         <td>6th</td>
+                                       </tr>
+                                       <tr>
+                                         <td>10</td>
+                                         <td>D.Lakshmi Lavanya</td>
+                                         <td>6th</td>
+                                       </tr>
+                                     </tbody></table>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>   
+                  </td>
+                  <td>51</td>
+                  <td>Srikakulam</td>
+                </tr>
+              </tbody>
+            </table>
+  </div>
+<!------------------------   -----------------------------> 
+        <div class="jumbotron jumbotron-fluid" style="text-align: center;color: white;background-color:white;">
+        <div class="container" >
+              <div class="row mb-9" style="margin: 0% 0% 0% -10%;width:118%;">
+                    <div class="col-md-4">
+                      <div class="card border-primary" style="background-image: linear-gradient(45deg, #874da2 0%, #c43a30 100%);">
+                        <i class='fas fa-school' style='font-size:50px;color:white;margin:4% 0% 0% 0%;'></i>
+                            <div class="card-body ">
+                              <div style="text-align: center;color: white">
+                                 <h2>Total<br>Participated<br>Schools</h2>
+                              </div>
+                              <h1 class="timer count-title count-number" data-to="15" data-speed="5000"></h1>
+                              <h2 style="margin:-15% 0% 0% 50%;"><b>+</b></h2>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card border-success" style="background-image: linear-gradient(45deg, #874da2 0%, #c43a30 100%);">
+                          <i class='fas fa-users' style='font-size:50px;color:white;margin:4% 0% 0% 0%;'></i>
+                          <div class="card-body">
+                             <div  style="text-align: center;color: white">
+                                <h2>Total<br>Participated<br>Students</h2>
+                             </div>
+                             <h1 class="timer count-title count-number" data-to="1334" data-speed="5000">+</h1>
+                             <h2 style="margin:-15% 0% 0% 50%;"><b>+</b></h2>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card border-secondary" style="background-image: linear-gradient(45deg, #874da2 0%, #c43a30 100%);">
+                          <i class='fas fa-user-graduate'   style='font-size:50px;color:white;margin:4% 0% 0% 0%;'></i>
+                          <div class="card-body">
+                            <div  style="text-align: center">
+                               <h2>Total <br>Qualified <br> Students</h2>
+                            </div>
+                            <h1 class="timer count-title count-number" data-to="135" data-speed="1500">+</h1>
+                            <h2 style="margin:-15% 0% 0% 50%;"><b>+</b></h2>
+                          </div>
+                        </div>
+                   </div>
+             </div>   
+           </div>
+          </div>
+        </div>
+      </div>
+</section>
+
+<!------------------------   ----------------------------->
+
+<!------------------------   -----------------------------> 
+<div id="pictures">
+<div style="margin: -7% 0% 0% 0%;">
+  <div class="jumbotron jumbotron-fluid" style="text-align: center;color:white;background-color:white;">
+  <div class="container" >
+    <div class="row mb-9" style="margin: 0% 0% 0% -18%;width:135%;">
+      <div class="col-md-12">
+          <h1 class="text-center text-danger">GALLERY</h1>
+      </div>
+            <div class="col-md-4">
+              <div class="card-12" >
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                          <img src="images//schoolspics (16).jpg" style="width:100%">
+                          <div class="text">DAV Public School, Palakonda</div>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="images/schoolspic (14).jpg" style="width:100%">
+                        <div class="text">Ravindrabarathi, Patapattanam</div>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="images//schoolspic (3).jpg" style="width:100%">
+                        <div class="text">Z P H S Ravivalasa</div>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="images//_DSC8973.JPG" style="width:100%">
+                        <div class="text">Finals@Aitam </div>
+                      </div>
+                   </div>
+               </div>
+             </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card-12" >        
+                      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                              <img src="images//schoolspic (1).jpg" style="width:100%;">
+                              <div class="text">Z P H S Ravivalasa</div>
+                          </div>
+                          <div class="carousel-item">
+                              <img src="images//schoolspic (6).jpg" style="width:100%">
+                              <div class="text">  M.P.U.P School</div>
+                          </div>
+                          <div class="carousel-item">
+                              <img src="images//schoolspic (14).jpg" style="width:100%">
+                              <div class="text">Ravindrabarathi, Patapattanam</div>
+                          </div>
+                          <div class="carousel-item">
+                              <img src="images//_DSC9030.JPG" style="width:100%">
+                              <div class="text">Finals@Aitam </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+           </div>
+           <div class="col-md-4">
+                <div class="card-12" >        
+                      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                              <img src="images//schoolspic (15).jpg" style="width:100%;">
+                              <div class="text">Ravindrabarathi, Patapattanam</div>
+                          </div>
+                          <div class="carousel-item">
+                              <img src="images//schoolspic (3).jpg" style="width:100%">
+                              <div class="text">Z P H S Ravivalasa</div>
+                          </div>
+                          <div class="carousel-item">
+                              <img src="images//schoolspic (9).jpg" style="width:100%">
+                              <div class="text">  M.P.U.P School</div>
+                          </div>
+                          <div class="carousel-item">
+                              <img src="images//_DSC9115.JPG" style="width:100%">
+                              <div class="text">Finals@Aitam </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+           </div>
+          
+        </div>
+      </div>   
+    </div>
+  </div>
+</div>
+<br><br>
+</div>
+<!------------------------   ----------------------------->
+
+<!------------------------   -----------------------------> 
+<div id="summer_program" style="width:85%;margin: -5% 0% 0% 8%;">
+  <br><br><br>
+    <div class="summer_program">
+      <h1 class="text-center text-danger ">SUMMER PROGRAM<br>  <b>Qualified Schools</b></h1>
+        <div class="table-responsive">
+            <table class="table table-bordered">
+              <thead class="bg-danger" style="color:white;">
+                <tr>
+                    <th scope="col">S No.</th>
+                    <th scope="col">Name of the school</th>
+                    <th scope="col">Location</th>
+                     <th scope="col">Students List</th>
+                     <th scope="col">Position</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>GMR Seetha Mahalakhmi DAV Public School</td>
+                  <td>Palakonda</td>
+                  <td style="">
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn bg-danger  text-white" data-toggle="modal" data-target="#modelq1">View</button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="modelq1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                              <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Students List</h5>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
+                                  </div>
+                                  <div class="modal-body">
+                                          <table class="table table-bordered">
+                                                 <tbody><tr>
+                                                   <th>S No.</th>
+                                                   <th>Student Name</th>
+                                                   <th>Class</th>
+                                                 </tr>
+                                                   <tr>
+                                                   <td>1</td>
+                                                   <td>G.Sai Vaishnavi</td>
+                                                   <td>8th</td>
+                                                 </tr>
+                                                 <tr>
+                                                   <td>2</td>
+                                                   <td>S.Pranay Harshith</td>
+                                                   <td>7th</td>
+                                                 </tr>
+                                                 <tr>
+                                                   <td>3</td>
+                                                   <td>K.Gowtham Kumar</td>
+                                                   <td>6th</td>
+                                                 </tr>
+                                                 <tr>
+                                                   <td>4</td>
+                                                   <td>CH.Girija Lahari</td>
+                                                   <td>8th</td>
+                                                 </tr>
+                                          </tbody>
+                                       </table>
+                                      </div>
+                                                <div class="modal-footer">
+                                                  <button type="button" class="btn btn-secondary text-white" data-dismiss="modal">Close</button>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>         
+                  </td>
+                   <td>Winners</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Vikas High School </td>
+                  <td>Laxminagar , Amdalavalasa</td>
+                  <td style="">
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn bg-danger  text-white" data-toggle="modal" data-target="#modelq2">View</button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="modelq2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                              <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Students List</h5>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
+                                  </div>
+                                  <div class="modal-body">
+                                          <table class="table table-bordered">
+                                                 <tbody><tr>
+                                                   <th>S No.</th>
+                                                   <th>Student Name</th>
+                                                   <th>Class</th>
+                                                 </tr>
+                                                 <tr>
+                                                 <td>1</td>
+                                                 <td>V.Durgacharan</td>
+                                                 <td>8th</td>
+                                               </tr>
+                                              <tr>
+                                                 <td>2</td>
+                                                 <td>P.Likhitha</td>
+                                                 <td>7th</td>
+                                               </tr>
+                                                <tr>
+                                                 <td>3</td>
+                                                 <td>S.Kavya</td>
+                                                 <td>6th</td>
+                                               </tr>
+                                                <tr>
+                                                 <td>4</td>
+                                                 <td>M.Kruthika</td>
+                                                 <td>6th</td>
+                                               </tr>
+                                                   
+                                          </tbody>
+                                       </table>
+                                      </div>
+                                                <div class="modal-footer">
+                                                  <button type="button" class="btn btn-secondary text-white" data-dismiss="modal">Close</button>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>         
+                  </td>
+                   <td>Runners</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Municipal High School</td>
+                  <td>Palakonda</td>
+                  <td style="">
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn bg-danger  text-white" data-toggle="modal" data-target="#modelq3">View</button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="modelq3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                              <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Students List</h5>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
+                                  </div>
+                                  <div class="modal-body">
+                                          <table class="table table-bordered">
+                                                 <tbody><tr>
+                                                   <th>S No.</th>
+                                                   <th>Student Name</th>
+                                                   <th>Class</th>
+                                                 </tr>
+                                                 <tr>
+                                         <td>1</td>
+                                         <td>V.Bharath Kumar</td>
+                                         <td>9th</td>
+                                       </tr>
+                                          <tr>
+                                         <td>2</td>
+                                         <td>A.Surya</td>
+                                         <td>8th</td>
+                                       </tr>
+                                          <tr>
+                                         <td>3</td>
+                                         <td>P.Rakesh</td>
+                                         <td>7th</td>
+                                       </tr>
+                                          <tr>
+                                         <td>4</td>
+                                         <td>G.Hemant Kumar</td>
+                                         <td>7th</td>
+                                       </tr>
+                                                   
+                                          </tbody>
+                                       </table>
+                                      </div>
+                                                <div class="modal-footer">
+                                                  <button type="button" class="btn btn-secondary text-white" data-dismiss="modal">Close</button>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>         
+                  </td>
+                   <td>3rd</td>
+                </tr>
+                <tr>
+                  <th scope="row">4</th>
+                  <td>Ravindra Bharathi </td>
+                  <td>Pathapatnam</td>
+                  <td style="">
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn bg-danger  text-white" data-toggle="modal" data-target="#modelq4">View</button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="modelq4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                              <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Students List</h5>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
+                                  </div>
+                                  <div class="modal-body">
+                                          <table class="table table-bordered">
+                                                 <tbody><tr>
+                                                   <th>S No.</th>
+                                                   <th>Student Name</th>
+                                                   <th>Class</th>
+                                                 </tr>
+                                                 <tr>
+                                             <td>1</td>
+                                             <td>S.Vasudha</td>
+                                             <td>9th</td>
+                                           </tr>
+                                                <tr>
+                                             <td>2</td>
+                                             <td>P.Charn</td>
+                                             <td>9th</td>
+                                           </tr>
+                                            <tr>
+                                             <td>3</td>
+                                             <td>A.Chakradhar</td>
+                                             <td>8th</td>
+                                           </tr>
+                                            <tr>
+                                             <td>4</td>
+                                             <td>B.Likitha</td>
+                                             <td>7th</td>
+                                           </tr><tr>
+                                            <td>5</td>
+                                             <td>A.Charan</td>
+                                             <td>7th</td>
+                                           </tr>
+                                            <tr>
+                                             <td>6</td>
+                                             <td>B.Lalasa</td>
+                                             <td>6th</td>
+                                           </tr>
+                                                   
+                                          </tbody>
+                                       </table>
+                                      </div>
+                                                <div class="modal-footer">
+                                                  <button type="button" class="btn btn-secondary text-white" data-dismiss="modal">Close</button>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>         
+                  </td>
+                   <td>4th</td>
+                </tr>
+                              <tr>
+                  <th scope="row">5</th>
+                  <td>T S R English Medium</td>
+                  <td>Amdalavalsa</td>
+                  <td style="">
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn bg-danger  text-white" data-toggle="modal" data-target="#modelq5">View</button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="modelq5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                              <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Students List</h5>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
+                                  </div>
+                                  <div class="modal-body">
+                                          <table class="table table-bordered">
+                                                 <tbody><tr>
+                                                   <th>S No.</th>
+                                                   <th>Student Name</th>
+                                                   <th>Class</th>
+                                                 </tr>
+                                                 <tr>
+                                             <td>1</td>
+                                             <td>S.Manju Sai</td>
+                                             <td></td>
+                                           </tr>
+                                                <tr>
+                                             <td>2</td>
+                                             <td>G. Pavani</td>
+                                             <td></td>
+                                           </tr>
+                                            <tr>
+                                             <td>3</td>
+                                             <td>M. Gowtham</td>
+                                             <td> 7th</td>
+                                           </tr>
+                                            <tr>
+                                             <td>4</td>
+                                             <td>Ch. Thrivani</td>
+                                             <td></td>
+                                           </tr><tr>
+                                            <td>5</td>
+                                             <td>D.Charandep</td>
+                                             <td>8th</td>
+                                           </tr>
+                                          </tbody>
+                                       </table>
+                                      </div>
+                                                <div class="modal-footer">
+                                                  <button type="button" class="btn btn-secondary text-white" data-dismiss="modal">Close</button>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>         
+                  </td>
+                   <td>5th</td>
+                </tr>                <tr>
+                  <th scope="row">6</th>
+                  <td>Sarvani Vidyalaya </td>
+                  <td>Srikakulam</td>
+                  <td style="">
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn bg-danger  text-white" data-toggle="modal" data-target="#modelq6">View</button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="modelq6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                              <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Students List</h5>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
+                                  </div>
+                                  <div class="modal-body">
+                                          <table class="table table-bordered">
+                                                 <tbody><tr>
+                                                   <th>S No.</th>
+                                                   <th>Student Name</th>
+                                                   <th>Class</th>
+                                                 </tr>
+                                                 <tr>
+                                             <td>1</td>
+                                             <td>B.S.L.V.V.Prasad</td>
+                                             <td>9th</td>
+                                           </tr>
+                                                <tr>
+                                             <td>2</td>
+                                             <td>K.Tanish</td>
+                                             <td>8th</td>
+                                           </tr>
+                                            <tr>
+                                             <td>3</td>
+                                             <td>K.S.V.Pranav</td>
+                                             <td>7th</td>
+                                           </tr>
+                                            <tr>
+                                             <td>4</td>
+                                             <td>B.Ram Charan</td>
+                                             <td>6th</td>
+                                           </tr>
+                                                   
+                                          </tbody>
+                                       </table>
+                                      </div>
+                                                <div class="modal-footer">
+                                                  <button type="button" class="btn btn-secondary text-white" data-dismiss="modal">Close</button>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>         
+                  </td>
+                   <td>6th</td>
+                </tr></tbody>
+              </table>
+
+ 
+</div>
+</section>
+<!------------------------   ----------------------------->
+<!------------------------   -----------------------------> 
+<section id="Press">
+<div class="jumbotron jumbotron-fluid" style="background-color: white;">
+  <div class="container">
+  <div class="col-md-12">
+      <h1 class="text-center text-danger">PRESS RELEASES</h1>
+      <br><br>
+    </div>
+<!-- Button trigger modal -->
+<div class="row">
+
+
+
+<div class="col-3"> <button type="button" class="btn" data-toggle="modal" data-target="#exampleModalCenter2">
+  <img src="images//press (2).jpeg" style="width:100%">
+ View</button></div><div class="col-3"> <button type="button" ctype="button" class="btn" data-toggle="modal" data-target="#exampleModalCenter3">
+  <img src="images//press (3).jpeg" style="width:100%">
+ View</button></div><div class="col-3"><button type="button" type="button" class="btn" data-toggle="modal" data-target="#exampleModalCenter4">
+  <img src="images//press (4).jpeg" style="width:100%">
+ View</button></div> <div class="col-3"> <button type="button" class="btn " data-toggle="modal" data-target="#exampleModalCenter1">
+  <img src="images//press (5).jpeg" style="width:100%">
+ View</button></div>
+</div>
+</div></div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" >
+  <div class="modal-dialog modal-dialog-centered" role="document" >
+      <div class="modal-body">
+          
+        <img src="images//press (5).jpeg" style="width:100%">
+      </div>
+      
+    </div>
+  </div>
+</div> 
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" >
+  <div class="modal-dialog modal-dialog-centered" role="document" >
+      <div class="modal-body">
+        <img src="images//press (2).jpeg" style="width:100%">
+      </div>
+      
+    </div>
+  </div>
+</div> 
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" >
+  <div class="modal-dialog modal-dialog-centered" role="document" >
+      <div class="modal-body">
+
+        <img src="images//press (3).jpeg" style="width:100%">
+      </div>
+      
+    </div>
+  </div>
+</div> 
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter4" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" >
+  <div class="modal-dialog modal-dialog-centered" role="document" >
+      <div class="modal-body">
+      
+        <img src="images//press (4).jpeg" style="width:100%">
+      </div>
+      
+    </div>
+  </div>
+</div> 
+</section>
+<!------------------------   ----------------------------->
+<!------------------------   -----------------------------> 
+<section id="team" >
+<div id="nav-tabs" >
+          <h1 class="text-center text-danger">OUR TEAM</h1>
+          <div class="row">
+            <div class="col-md-12">
+              <!-- Tabs with icons on Card -->
+              <div class="card card-nav-tabs"style="border-top: none;">
+                <div class="card card-header-primary" style="border-bottom:none; border-top:none;">
+                  <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
+                    <div class="nav-tabs-wrapper"  >
+                      <ul class="nav " data-tabs="tabs"style="font-style:none;text-decoration: none;" >
+                        <li class="nav-item nav-tabs" style="margin:0% 0% 0% 35% ">
+                          <a class="nav-link active" href="#profile" data-toggle="tab">
+                            <i class="material-icons"><b>Board of Directors</b></i></a>
+                        </li>
+                        <li class="nav-item nav-tabs" >
+                          <a class="nav-link" href="#messages" data-toggle="tab">
+                            <i class="material-icons "><b>Operational Team</b></i></a>
+                        </li>
+                        <li class="nav-item nav-tabs" >
+                          <a class="nav-link" href="#settings" data-toggle="tab">
+                            <i class="material-icons "><b>Tech Team</b></i></a>
+                        </li>
+                      </ul>
+                    </div>
+           
+                </div>
+                <div class="card-body ">
+                  <div class="tab-content text-center">
+                    <div class="tab-pane active" id="profile">
+                      
+                   <div class="container">
+                         <h2 class="text-center">BOARD OF DIRECTORS</h2>
+                                      <div class="row">
+                                          <div class="col-md-3 col-sm-5">
+                                              <div class="our-team">
+                                                  <div class="pic">
+                                                      <img src="images/directorsir.jpg">
+                                                  </div>
+                                                  <div class="team-content">
+                                                      <h4 class="title">Prof. V.V Nageswara Rao</h4>
+                                                      <span class="post">(DIRECTOR)</span>
+                                                   <!--   <ul class="social">
+                                                          <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                                                          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                                          <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
+                                                      </ul>--->
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <div class="col-md-3 col-sm-5">
+                                              <div class="our-team">
+                                                  <div class="pic">
+                                                      <img src="images/principal.jpg">
+                                                  </div>
+                                                  <div class="team-content">
+                                                      <h4 class="title">Dr.A. S. Srinivasa Rao</h4>
+                                                      <span class="post">(DIRECTOR)</span>
+                                                     <!--    <ul class="social">
+                                                          <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                                                          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                                          <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
+                                                      </ul>--->
+                                                  </div>
+                                              </div>
+                                          </div>
+                                                  <div class="col-md-3 col-sm-5">
+                                              <div class="our-team">
+                                                  <div class="pic">
+                                                      <img src="images/sureshkumar.jpg">
+                                                  </div>
+                                                  <div class="team-content">
+                                                      <h4 class="title">K.Suresh Kumar</h4>
+                                                      <span class="post">(SAC INCHARGE)</span>
+                                                   <!--   <ul class="social">
+                                                          <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                                                          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                                          <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
+                                                      </ul>--->
+                                                  </div>
+                                              </div>
+                                          </div>
+                                                  <div class="col-md-3 col-sm-5">
+                                              <div class="our-team">
+                                                  <div class="pic">
+                                                      <img src="images/girishsir.jpg">
+                                                  </div>
+                                                  <div class="team-content">
+                                                      <h4 class="title"> Girish Kumar</h4>
+                                                      <span class="post">(SAC)</span>
+                                                   <!--   <ul class="social">
+                                                          <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                                                          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                                          <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
+                                                      </ul>--->
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+
+
+                    </div>
+                    <div class="tab-pane" id="messages">
+                      <div class="container">
+                        <h2 class="text-center">OPARATIONAL TEAM</h2>
+                          <div class="row">
+                              <div class="col-md-2 col-sm-2">
+                                  <div class="our-team">
+                                      <div class="pic">
+                                          <img src="images/saikrishna.jpeg">
+                                      </div>
+                                      <div class="team-content">
+                                          <h6 class="title2">Sai Krishna</h6>
+                                          
+                                       <!--   <ul class="social">
+                                              <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                                              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                              <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
+                                          </ul>--->
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-md-2 col-sm-2">
+                                  <div class="our-team">
+                                      <div class="pic">
+                                          <img src="images/kissan.jpeg">
+                                      </div>
+                                      <div class="team-content">
+                                          <h6 class="title2">KISHAN</h6>
+                                          
+                                         <!--    <ul class="social">
+                                              <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                                              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                              <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
+                                          </ul>--->
+                                      </div>
+                                  </div>
+                              </div>
+                                      <div class="col-md-2 col-sm-2">
+                                  <div class="our-team">
+                                      <div class="pic">
+                                          <img src="images/surya.jpg">
+                                      </div>
+                                      <div class="team-content">
+                                          <h6 class="title2">J.SURYA</h6>
+                                          
+                                       <!--   <ul class="social">
+                                              <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                                              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                              <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
+                                          </ul>--->
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-md-2 col-sm-2">
+                                  <div class="our-team">
+                                      <div class="pic">
+                                          <img src="images/bhargav.jpg">
+                                      </div>
+                                      <div class="team-content">
+                                          <h6 class="title2">T.BHARGAV</h6>
+                                         
+                                       <!--   <ul class="social">
+                                              <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                                              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                              <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
+                                          </ul>--->
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-md-2 col-sm-2">
+                                  <div class="our-team">
+                                      <div class="pic">
+                                          <img src="images/sudhir.jpeg">
+                                      </div>
+                                      <div class="team-content">
+                                          <h6 class="title2">S.Sudheer Kumar</h6>
+                                          
+                                       <!--   <ul class="social">
+                                              <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                                              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                              <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
+                                          </ul>--->
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-md-2 col-sm-2">
+                                  <div class="our-team">
+                                      <div class="pic">
+                                          <img src="images/Hemanth.jpeg">
+                                      </div>
+                                      <div class="team-content">
+                                          <h6 class="title2">Hemanth</h6>
+                                          
+                                       <!--   <ul class="social">
+                                              <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                                              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                              <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
+                                          </ul>--->
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <!------------------------------------->
+                      <br>
+                      <div class="container">
+                          <div class="row">
+                              <div class="col-md-2 col-sm-2">
+                                  <div class="our-team">
+                                      <div class="pic">
+                                          <img src="images/pavan.jpeg">
+                                      </div>
+                                      <div class="team-content">
+                                          <h6 class="title2">Pavan</h6>
+                                          
+                                       <!--   <ul class="social">
+                                              <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                                              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                              <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
+                                          </ul>--->
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-md-2 col-sm-2">
+                                  <div class="our-team">
+                                      <div class="pic">
+                                          <img src="images/pavanbro.jfif">
+                                      </div>
+                                      <div class="team-content">
+                                          <h6 class="title2">G.Pavan</h6>
+                                         
+                                         <!--    <ul class="social">
+                                              <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                                              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                              <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
+                                          </ul>--->
+                                      </div>
+                                  </div>
+                              </div>
+                                      <div class="col-md-2 col-sm-2">
+                                  <div class="our-team">
+                                      <div class="pic">
+                                          <img src="images/Alekhya.jpg">
+                                      </div>
+                                      <div class="team-content">
+                                          <h6 class="title2">S.Alekhya</h6>
+                                          
+                                       <!--   <ul class="social">
+                                              <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                                              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                              <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
+                                          </ul>--->
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-md-2 col-sm-2">
+                                  <div class="our-team">
+                                      <div class="pic">
+                                          <img src="images/sirisha.jpg">
+                                      </div>
+                                      <div class="team-content">
+                                          <h6 class="title2">G.Sirisha</h6>
+                                          
+                                       <!--   <ul class="social">
+                                              <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                                              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                              <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
+                                          </ul>--->
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-md-2 col-sm-2">
+                                  <div class="our-team">
+                                      <div class="pic">
+                                          <img src="images/harathi.jpg">
+                                      </div>
+                                      <div class="team-content">
+                                          <h6 class="title2">N.Harathi</h6>
+                                          
+                                       <!--   <ul class="social">
+                                              <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                                              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                              <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
+                                          </ul>--->
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-md-2 col-sm-2">
+                                  <div class="our-team">
+                                      <div class="pic">
+                                          <img src="images/keerthika.jpg">
+                                      </div>
+                                      <div class="team-content">
+                                          <h6 class="title2"> KVSG Keerthika</h6>
+                                          
+                                       <!--   <ul class="social">
+                                              <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                                              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                              <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
+                                          </ul>--->
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <!------------------------------------->
+                      <br>
+                      <div class="container">
+                          <div class="row">
+                              <div class="col-md-2 col-sm-2">
+                                  <div class="our-team">
+                                      <div class="pic">
+                                          <img src="images/manoj.jpg">
+                                      </div>
+                                      <div class="team-content">
+                                          <h6 class="title2">K.Manoj</h6>
+                                          
+                                       <!--   <ul class="social">
+                                              <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                                              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                              <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
+                                          </ul>--->
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-md-2 col-sm-2">
+                                  <div class="our-team">
+                                      <div class="pic">
+                                          <img src="images/rajesh1.jpg">
+                                      </div>
+                                      <div class="team-content">
+                                          <h6 class="title2">P.RAJESH</h6>
+                                          
+                                         <!--    <ul class="social">
+                                              <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                                              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                              <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
+                                          </ul>--->
+                                      </div>
+                                  </div>
+                              </div>
+                                      <div class="col-md-2 col-sm-2">
+                                  <div class="our-team">
+                                      <div class="pic">
+                                          <img src="images/harika.jpeg">
+                                      </div>
+                                      <div class="team-content">
+                                          <h6 class="title2">M.HARIKA</h6>
+                                          
+                                       <!--   <ul class="social">
+                                              <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                                              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                              <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
+                                          </ul>--->
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-md-2 col-sm-2">
+                                  <div class="our-team">
+                                      <div class="pic">
+                                          <img src="images/sandypic.jpg">
+                                      </div>
+                                      <div class="team-content">
+                                          <h6 class="title2">G.Sandhya Rani</h6>
+                                          
+                                       <!--   <ul class="social">
+                                              <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                                              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                              <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
+                                          </ul>--->
+                                      </div>
+                                  </div>
+                              </div>
+
+                          </div>
+                      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                    </div>
+                    <div class="tab-pane" id="settings">
+                      <h2 class="text-center">TECH TEAM</h2>
+        
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2 col-sm-2">
+                        <div class="our-team">
+                            <div class="pic">
+                                <img src="images/meghana.jpeg">
+                            </div>
+                            <div class="team-content">
+                                <h6 class="title2">S.MEGHANA</h6>
+                                
+                             <!--   <ul class="social">
+                                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
+                                </ul>--->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-2">
+                        <div class="our-team">
+                            <div class="pic">
+                                <img src="images/neeraja.jpg">
+                            </div>
+                            <div class="team-content">
+                                <h6 class="title2">CH.NEERAJA</h6>
+                               
+                               <!--    <ul class="social">
+                                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
+                                </ul>--->
+                            </div>
+                        </div>
+                    </div>
+                            <div class="col-md-2 col-sm-2">
+                        <div class="our-team">
+                            <div class="pic">
+                                <img src="images/sravya.png">
+                            </div>
+                            <div class="team-content">
+                                <h6 class="title2">M.Sravya</h6>
+                                
+                             <!--   <ul class="social">
+                                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
+                                </ul>--->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-2">
+                        <div class="our-team">
+                            <div class="pic">
+                                <img src="images/gowri.jpg">
+                            </div>
+                            <div class="team-content">
+                                <h6 class="title2">T.GOWRI PRIYA</h6>
+                                
+                             <!--   <ul class="social">
+                                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
+                                </ul>--->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-2 col-sm-2">
+                        <div class="our-team">
+                            <div class="pic">
+                                <img src="images/akash.jpg">
+                            </div>
+                            <div class="team-content">
+                                <h6 class="title2">P.AKASH</h6>
+                                
+                             <!--   <ul class="social">
+                                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
+                                </ul>--->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-2">
+                        <div class="our-team">
+                            <div class="pic">
+                                <img src="images/tarun.jpg">
+                            </div>
+                            <div class="team-content">
+                                <h6 class="title2">K.TARUN</h6>
+                                
+                             <!--   <ul class="social">
+                                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
+                                </ul>--->
+                            </div>
+                        </div>
+                    <br><br><br><br>
+                    <br>
+                    </div>
+                </div>
+</div></section>
+<!------------------------------------->
+<!------------------------   ----------------------------->
+<Br>
+<!------------------------   -----------------------------> 
+<div id="Contact" style="background-color:#EAECEE;">
+    <h1 class="text-center text-danger">CONTACT</h1>
+      <div class="container px-lg-5">
+        <div class="row mx-lg-n5">
+          <div class="col-8 py-3 px-lg-5 "><i class="fas fa-home mr-9"></i> <b>SAC (STUDENT ACTIVITY CENTER)<br>Aditya Institute of Technology and Management</b>,<br>K. Kotturu, Tekkali,<br>Srikakulam Dist., A.P., India</div>
+          <div class="col-4 py-3 px-lg-5"><i class="fas fa-envelope mr-9" ></i> <b> Email:</b>  aitamsac@gmail.com <br>
+            <i class="fa fa-phone" aria-hidden="false"></i><b>J.SureshKumar(Faculty):</b><br>+91 92912 90936<br>
+            <i class="fa fa-phone" aria-hidden="true"></i><b>Sai Krishna( Student):</b><br>+91 93901 84512<br>
+          </div>     
+         </div>
+      </div>
+</div>
+<!------------------------   ----------------------------->
+
+<!------------------------   -----------------------------> 
+<footer style="width:100%; background-image: linear-gradient(45deg, #874da2 0%, #c43a30 100%); text-align: center;color:">
+<div class="card-footer text-muted">
+            <h6 style="color: white;">Designed and Developed by Developers Club ,<b><a href="http://www.aitamsac.in/"> AITAM SAC</a></b></h6>
+  </div>
+</footer>
+<!------------------------   ----------------------------->
+
+<!------------------------   ----------------------------->
+<script >
+  (function ($) {
+  $.fn.countTo = function (options) {
+    options = options || {};
+    
+    return $(this).each(function () {
+      // set options for current element
+      var settings = $.extend({}, $.fn.countTo.defaults, {
+        from:            $(this).data('from'),
+        to:              $(this).data('to'),
+        speed:           $(this).data('speed'),
+        refreshInterval: $(this).data('refresh-interval'),
+        decimals:        $(this).data('decimals')
+      }, options);
+      
+      // how many times to update the value, and how much to increment the value on each update
+      var loops = Math.ceil(settings.speed / settings.refreshInterval),
+        increment = (settings.to - settings.from) / loops;
+      
+      // references & variables that will change with each update
+      var self = this,
+        $self = $(this),
+        loopCount = 0,
+        value = settings.from,
+        data = $self.data('countTo') || {};
+      
+      $self.data('countTo', data);
+      
+      // if an existing interval can be found, clear it first
+      if (data.interval) {
+        clearInterval(data.interval);
+      }
+      data.interval = setInterval(updateTimer, settings.refreshInterval);
+      
+      // initialize the element with the starting value
+      render(value);
+      
+      function updateTimer() {
+        value += increment;
+        loopCount++;
+        
+        render(value);
+        
+        if (typeof(settings.onUpdate) == 'function') {
+          settings.onUpdate.call(self, value);
+        }
+        
+        if (loopCount >= loops) {
+          // remove the interval
+          $self.removeData('countTo');
+          clearInterval(data.interval);
+          value = settings.to;
+          
+          if (typeof(settings.onComplete) == 'function') {
+            settings.onComplete.call(self, value);
+          }
+        }
+      }
+      
+      function render(value) {
+        var formattedValue = settings.formatter.call(self, value, settings);
+        $self.html(formattedValue);
+      }
+    });
+  };
+  
+  $.fn.countTo.defaults = {
+    from: 0,               // the number the element should start at
+    to: 0,                 // the number the element should end at
+    speed: 1000,           // how long it should take to count between the target numbers
+    refreshInterval: 100,  // how often the element should be updated
+    decimals: 0,           // the number of decimal places to show
+    formatter: formatter,  // handler for formatting the value before rendering
+    onUpdate: null,        // callback method for every time the element is updated
+    onComplete: null       // callback method for when the element finishes updating
+  };
+  
+  function formatter(value, settings) {
+    return value.toFixed(settings.decimals);
+  }
+}(jQuery));
+
+jQuery(function ($) {
+  // custom formatting example
+  $('.count-number').data('countToOptions', {
+  formatter: function (value, options) {
+    return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
+  }
+  });
+  
+  // start all the timers
+  $('.timer').each(count);  
+  
+  function count(options) {
+  var $this = $(this);
+  options = $.extend({}, options || {}, $this.data('countToOptions') || {});
+  $this.countTo(options);
+  }
+});
+
+
+function hideNonVisibleDivs() {
+  var i, divId, div;
+  for(i = 0; i < divs.length; i++) {
+    divId = divs[i];
+    div = document.getElementById(divId);
+    if(visibleDivId === divId) {
+      div.style.display = "block";
+
+    } else {
+      div.style.display = "none";
+    }
+  }
+}
+var divs = ["Menu1", "Menu2", "Menu3", "Menu4"];
+var visibleDivId = null;
+function toggleVisibility(divId) {
+  if(visibleDivId === divId) {
+    //visibleDivId = null;
+  } else {
+    visibleDivId = divId;
+  }
+  hideNonVisibleDivs();
+}
+ $(document).ready(function() { 
+            $('li').click(function() { 
+                $('li.list-group-item.active').removeClass("active"); 
+                $(this).addClass("active"); 
+            }); 
+        }); 
+</script>
+</body>
+</html>
